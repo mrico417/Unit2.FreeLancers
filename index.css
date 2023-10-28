@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    align-items: center ;
+    margin: 0px;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+
+#column_headings, .freelancer_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    width: 500px;
+}
+
+#column_headings > div {
+    font-size: large;
+    font-weight: bold;
+}
+
+.freelancer_starting_price, .column_heading_starting_price {
+    display:flex;
+    justify-content: right;
+}
+
+.freelancer_name, .freelancer_occupation {
+    padding-left: 5px;
+}
