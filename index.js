@@ -48,7 +48,9 @@ function render(){
         const freelancerRow = document.createElement("div");
         freelancerRow.classList.add("freelancer_row");
         freelancerRow.setAttribute("id",idx);
-
+        if(idx % 2 === 0){
+            freelancerRow.classList.add("freelancer_row_khaki"); 
+        }        
         const freelancerName = document.createElement("div");
         freelancerName.classList.add("freelancer_name");
         freelancerName.textContent = elFreelancer.name;
