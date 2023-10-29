@@ -36,7 +36,10 @@ const averagePrice = () => {
 //start rendering sample data from theFreelancers to the web browser
 const addFreelancerIntervalID = setInterval(addFreelancer,1500);
 
-  
+//this render() function needs to be here in order to render the first two objects of theFreelancers array
+render();
+
+
 //this function is call from addFreelancer() function used in setInterval with 1.5 seconds
 //it iterates through theFreelancers array of freelancer objects
 // a) creates a parent freelancerRow div element and b) its three children div elements
