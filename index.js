@@ -61,7 +61,7 @@ function render(){
 
         const freelancerPrice = document.createElement("div");
         freelancerPrice.classList.add("freelancer_starting_price");
-        freelancerPrice.textContent = elFreelancer.price;
+        freelancerPrice.textContent = `$${elFreelancer.price}`;
 
         freelancerRow.appendChild(freelancerName);
         freelancerRow.appendChild(freelancerOccupation);
