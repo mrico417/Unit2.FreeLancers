@@ -13,14 +13,14 @@ const freelancersSample = [
 //collect all the names, prices, and occupation into an array from the freelancersSample array of freelancer objects
 const names = freelancersSample.map((freelancer) => freelancer.name);
 const prices = freelancersSample.map((freelancer) => freelancer.price);
-const occupationsTemp = freelancersSample.map((freelancer) => freelancer.occupation);
 
-//iterate through the occupationsTemp array and use the Set.add() method to create a 
-//unique list of occupations.
-const occupationsSet = new Set();
-occupationsTemp.forEach((occ) => occupationsSet.add(occ));
-//convert Set() object to array
-const occupations = [...occupationsSet]
+// method 1: cool liner to make the occupations unique by creating a set from the map and coverted back to an array
+const occupations = [...[... new Set(freelancersSample.map((freelancer) => freelancer.occupation))]]
+
+
+// method 2: make the occupations unique by creating a set from the map and coverted back to an array
+// const occupationsSet = [... new Set(freelancersSample.map((freelancer) => freelancer.occupation))];
+// const occupations = [...occupationsSet]
 
 //add sample data into theFreelancers array
 const theFreelancers = [
