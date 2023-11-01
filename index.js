@@ -53,8 +53,14 @@ function render(){
         freelancerRow.setAttribute("id",idx);
         if(idx % 2 === 0){
             freelancerRow.classList.add("freelancer_row_khaki"); 
-        }        
-        const freelancerName = document.createElement("div");
+        }
+        
+        freelancerRow.innerHTML = `
+            <div class="freelancer_name">${elFreelancer.name}</div>
+            <div class="freelancer_occupation">${elFreelancer.occupation}</div>
+            <div class="freelancer_price">${elFreelancer.price}</div>
+        `;
+        /* const freelancerName = document.createElement("div");
         freelancerName.classList.add("freelancer_name");
         freelancerName.textContent = elFreelancer.name;
 
@@ -68,7 +74,7 @@ function render(){
 
         freelancerRow.appendChild(freelancerName);
         freelancerRow.appendChild(freelancerOccupation);
-        freelancerRow.appendChild(freelancerPrice);
+        freelancerRow.appendChild(freelancerPrice); */
 
         return freelancerRow;
     })
